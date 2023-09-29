@@ -1,4 +1,4 @@
-const apiKey = 'KX4DOSM5SNJOYUC4'; // Reemplaza con tu clave de API de Alpha Vantage
+const apiKey = ''; // Reemplaza con tu clave de API de Alpha Vantage
 
 const apiUrl = `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=USD&apikey=${apiKey}`;
 const apiUrl2 = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=GGAL.BA&apikey=${apiKey}`
