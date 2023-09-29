@@ -38,4 +38,3 @@ document.getElementById("convertirBtn").addEventListener("click", function() {
         document.getElementById("resultado").textContent = 'Error al obtener datos. Por favor, intenta de nuevo más tarde.';
       });
   });
-  
