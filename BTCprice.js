@@ -1,7 +1,8 @@
 document.getElementById("consultarBtn").addEventListener("click", function() {
     const apiUrl = 'https://criptoya.com/api/btc/ars';
+    const apiUrl2 = 'https://criptoya.com/api/btc/usd';
   
-    fetch(apiUrl)
+    fetch(apiUrl2)
       .then(response => response.json())
       .then(data => {
         const prices = [
