@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Satoshis</title>
-  <!-- Enlaza el archivo JavaScript externo -->
-  <script src="calculator.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satoshis Converter</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="UI.css">
+    <!-- Link the external JavaScript file -->
+    <script src="calculator.js" defer></script>
 </head>
 
 <body>
-  <h1>Conversor de Satoshis</h1>
-  
-  <!-- Campo de entrada para satoshis -->
-  <label for="satoshisInput">Satoshis:</label>
-  <input type="number" id="satoshisInput" placeholder="Ingresa la cantidad de satoshis">
+    <div class="container">
+        <h1>SATulator</h1>
 
-  <!-- Slider para elegir el tipo de conversión -->
-  <label for="conversionSlider">Conversión a:</label>
-  <span id="conversionType">Pesos</span>
-  <input type="range" id="conversionSlider" min="0" max="1" step="1" value="0">
+        <div class="input-container">
+            <label for="satoshisInput">Satoshis:</label>
+            <input type="number" id="satoshisInput" class="input-field" placeholder="Ingresa la cantidad de satoshis">
+        </div>
 
-  <!-- Muestra el resultado de la conversión aquí -->
-  <div id="resultado"></div>
+        <div class="slider-container">
+            <label for="conversionSlider">Convertir a:</label>
+            <span id="conversionType" class="conversion-label">Pesos</span>
+            <input type="range" id="conversionSlider" class="vertical-slider" min="0" max="1" step="1" value="0">
+        </div>
 
-  <!-- El script puede ir aquí si no se ha enlazado desde un archivo externo -->
-
-  <!-- Llama a la función actualizarConversion cuando se modifica el campo de entrada o el slider -->
-  <script>
-    document.getElementById("satoshisInput").addEventListener("input", actualizarConversion);
-    document.getElementById("conversionSlider").addEventListener("input", actualizarConversion);
-  </script>
+        <div id="resultado" class="result"></div>
+    </div>
 </body>
 
 </html>
