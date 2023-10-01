@@ -18,6 +18,9 @@ body {
 
 .input-container {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-field {
@@ -26,6 +29,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  text-align: center;
 }
 
 .slider-container {
@@ -36,7 +40,7 @@ body {
 }
 
 .vertical-slider {
-  writing-mode: bt-lr; /* Modo de escritura de abajo hacia arriba */
+  writing-mode: bt-lr;
   appearance: slider-vertical;
   width: 20px;
   height: 150px;
@@ -54,4 +58,4 @@ body {
 .result {
   font-size: 18px;
   font-weight: bold;
-}  
+}

@@ -27,10 +27,9 @@ async function convert(satoshis, conversionType) {
         const averagePrice = totalPrices / numberOfExchanges;
         const satoshiValue = satoshis / 100000000;
         const conversionResult = satoshiValue * averagePrice;
-        return conversionResult.toFixed(2) + (conversionType === 0 ? ' ARS' : ' USD');
-        //return conversionResult.toLocaleString(undefined, { minimumFractionDigits: 2, useGrouping: true, style: 'currency', currency: (conversionType == 0 ? 'ARS' : 'USD') });
-      } else {
-        throw new Error(`No hay datos disponibles en los exchanges para BTC/${conversionType === 0 ? 'ARS' : 'USD'}.`);
+        return conversionResult.toLocaleString('en-US', {minimumFractionDigits: 2,maximumFractionDigits: 2,});
+
+      } else {throw new Error(`No hay datos disponibles en los exchanges para BTC`);
       }
     } catch (error) {
       throw new Error(`Error al realizar la conversión: ${error.message}`);

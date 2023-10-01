@@ -53,8 +53,8 @@ const App = () => {
         />
       </div>
 
-      <div id="resultado" className="result">
-        {conversionResult} {conversionType === 0 ? ' ARS' : ' USD'}
+      <div id="result" className="result">
+        {conversionResult}{conversionType == 0 ? " ARS" : " USD"}
       </div>
     </div>
   );
